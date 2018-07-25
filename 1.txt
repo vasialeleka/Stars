@@ -1,0 +1,9 @@
+git status
+
+git commit - сшхранение изменений
+
+
+
+
+
+git push
