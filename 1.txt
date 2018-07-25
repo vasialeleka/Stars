@@ -1,7 +1,17 @@
 git status
 
-git commit - сшхранение изменений
+git add (название файла) - 
 
+git commit - 
+
+
+
+Esc
+
+ (:wq)
+
+
+git commit
 
 
 
