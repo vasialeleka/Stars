@@ -136,6 +136,20 @@ $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.
 function Checking(){
 
   alert("1");
+var score =0;
+
+for (var i=0; i<questions.length;i++){
+
+
+  alert("2");
+   var question = questions[i];
+   for (var j in question.answers){
+
+     alert("3");
+   };
+};
+
+
 }
 
 
