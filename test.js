@@ -19,6 +19,14 @@ var questions=[
         "Варіант2",
         "Варіант3" , "Варіант4"],
     correctAnswer: 20
+},
+
+{
+  text: "Питання4",
+  answers: ["Варіант1",
+        "Варіант2",
+        "correct" , "Варіант4"],
+    correctAnswer: 32
 }
 ];
 

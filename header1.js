@@ -15,6 +15,7 @@ Testing();
 
 
 
+
   $('#StarSky').on("click",function(){
 
      Clean();
@@ -82,6 +83,22 @@ $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.
   Checking();
 
 });
+$("#img").on("click","#secondTest",function(){
+
+  Clean();
+  Testing();
+
+});
+
+
+
+
+
+$("#img").on("click","#rightanswer",function(){
+
+  alert("1")
+});
+
 
 
 
@@ -89,6 +106,7 @@ $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.
 
 
     function Clean(){
+        $('#testans').css("border","none");
       document.querySelector("#testans").innerHTML=(" ");
       document.querySelector("#img").innerHTML=("");
       document.querySelector("#top").innerHTML=(" ");
@@ -112,6 +130,7 @@ $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.
 
 
   function Testing(){
+    $('#testans').css("border","none")
       $('#testans').css("margin-top","-5%");
 
          for (var i=0;i<questions.length;i++){
@@ -137,20 +156,61 @@ function Checking(){
 
   alert("1");
 var score =0;
-
-for (var i=0; i<questions.length;i++){
-
-
-  alert("2");
-   var question = questions[i];
-   for (var j in question.answers){
-
-     alert("3");
+var number = questions.length;
+   for (var i=0; i<questions.length;i++){
+      var question = questions[i];
+        for (var j in question.answers){
+        if ($("#id"+i+j).prop("checked")){
+           if (   $("#id"+i+j+":checked").val() == question.correctAnswer  ){
+              score+=1;
+             alert("True")}
+           else {
+             alert("False")
+        };
+      };
    };
+  };
+
+
+Clean();
+$('#testans').css("margin-top","-5%");
+$('#testans').css("margin-right","1%");
+  var x =score/number;
+  //switch (True) {
+  //  case ( x>=0.75):
+  //alert("1");
+    //  break;
+  //  case (x<0.75 && x>0.4):
+  //  alert("2");
+   //break;
+
+  // case (x<=0.4):
+  // alert("3");
+  // break;
+
+  //default:
+      //   alert("none");
+      //   break;
+
+  //}
+
+     if ( x>=0.75  ){$('#testans').css("border","2px solid green");} else
+     if (x<0.75 && x>=0.4){$('#testans').css("border","2px solid orange")} else
+       if (x<0.74 ){$('#testans').css("border","2px solid red");}
+
+     $('#testans').css("padding","1%");
+       document.querySelector("#testans").innerHTML+=("<h4>Ви маєте правильних відповідей : "+score+" з "+number+" питань</h4>");
+   document.querySelector("#img").innerHTML+=('<br><input type="button" id="secondTest" class="btn btn-info" value="Пройти ще раз">');
+    document.querySelector("#img").innerHTML+=('<input type="button" id="rightanswer" class="btn btn-info" value="Правильні відповіді">');
+
+ $('#secondTest').css("width","35%");
+ $('#secondTest').css("margin-right","20%");
+ $('#secondTest').css("margin-left","5%");
+  $('#rightanswer').css("width","35%");
+  $('#rightanswer').css("margin-right","5%");
+
 };
 
-
-}
 
 
 
