@@ -83,6 +83,9 @@ $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.
   Checking();
 
 });
+
+
+
 $("#img").on("click","#secondTest",function(){
 
   Clean();
@@ -94,9 +97,15 @@ $("#img").on("click","#secondTest",function(){
 
 
 
+
+
+
+
 $("#img").on("click","#rightanswer",function(){
 
-  alert("1")
+
+  Clean();
+  allanswers();
 });
 
 
@@ -209,6 +218,40 @@ $('#testans').css("margin-right","1%");
   $('#rightanswer').css("width","35%");
   $('#rightanswer').css("margin-right","5%");
 
+};
+
+
+
+
+
+function allanswers(){
+
+  for (var i=0; i<questions.length;i++){
+     var question = questions[i];
+
+
+ document.querySelector("#testans").innerHTML+=('<div class="col-1" ></div>'+
+ '<div class="col-10">'+
+ '<ul class="list-group">'+
+       '<li class="list-group-item">'+question.text+'</li>'+
+     ' <li id="ans'+i+'" class="list-group-item list-group-item-success"></li>'+
+     '</div><div class="col-1" ></div>');
+   for (var j in question.answers) {
+     if (i+j==question.correctAnswer){
+           document.querySelector("#ans"+i).innerHTML+=(question.answers[j]);
+
+
+
+
+
+
+     }
+
+   };
+
+
+   }
+document.querySelector("#testans").innerHTML+=("");
 };
 
 
