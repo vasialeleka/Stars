@@ -96,7 +96,12 @@ $("#img").on("click","#secondTest",function(){
 
 
 
+$("#testans").on("click","#return",function(){
 
+  Clean();
+  Testing();
+
+});
 
 
 
@@ -251,7 +256,12 @@ function allanswers(){
 
 
    }
-document.querySelector("#testans").innerHTML+=("");
+  document.querySelector("#testans").innerHTML+=('<input type="button" id="return" class="btn btn-info" value="Повернутися до тесту"></div>');
+
+  $('#return').css("width","35%");
+  $('#return').css("margin-top","2%");
+  $('#return').css("margin-right","32.5%");
+  $('#return').css("margin-left","32.5%");
 };
 
 
