@@ -27,6 +27,198 @@ Testing();
 
 
 
+  $('#NorthCrown').on("click",function(){
+
+    Clean();
+    var article = articles[3];
+    general(article.photo,article.name,article.text);
+
+ });
+ $('#Virgo').on("click",function(){
+
+   Clean();
+   var article = articles[4];
+   general(article.photo,article.name,article.text);
+
+});
+
+$('#twins').on("click",function(){
+
+  Clean();
+  var article = articles[5];
+  general(article.photo,article.name,article.text);
+
+});
+$('#Vodol').on("click",function(){
+
+  Clean();
+  var article = articles[6];
+  general(article.photo,article.name,article.text);
+
+});
+$('#Volopas').on("click",function(){
+
+  Clean();
+  var article = articles[7];
+  general(article.photo,article.name,article.text);
+
+});
+$('#hitchhiking').on("click",function(){
+
+  Clean();
+  var article = articles[8];
+  general(article.photo,article.name,article.text);
+
+});
+$('#Vodol').on("click",function(){
+
+  Clean();
+  var article = articles[6];
+  general(article.photo,article.name,article.text);
+
+});
+$('#Capricornus').on("click",function(){
+
+  Clean();
+  var article = articles[9];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Lion').on("click",function(){
+
+  Clean();
+  var article = articles[10];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Lira').on("click",function(){
+
+  Clean();
+  var article = articles[11];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Cygnus').on("click",function(){
+
+  Clean();
+  var article = articles[12];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Aries').on("click",function(){
+
+  Clean();
+  var article = articles[13];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Aquila').on("click",function(){
+
+  Clean();
+  var article = articles[14];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Orion').on("click",function(){
+
+  Clean();
+  var article = articles[15];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Pegasus').on("click",function(){
+
+  Clean();
+  var article = articles[16];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Perseus').on("click",function(){
+
+  Clean();
+  var article = articles[17];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Cancer').on("click",function(){
+
+  Clean();
+  var article = articles[18];
+  general(article.photo,article.name,article.text);
+
+});
+$('#fih').on("click",function(){
+
+  Clean();
+  var article = articles[19];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Scorpion').on("click",function(){
+
+  Clean();
+  var article = articles[20];
+  general(article.photo,article.name,article.text);
+
+});
+$('#Sagittarius').on("click",function(){
+
+  Clean();
+  var article = articles[21];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Libra').on("click",function(){
+
+  Clean();
+  var article = articles[22];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#Taurus').on("click",function(){
+
+  Clean();
+  var article = articles[23];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#CanisMajor').on("click",function(){
+
+  Clean();
+  var article = articles[24];
+  general(article.photo,article.name,article.text);
+
+});
+
+$('#CanisLittle').on("click",function(){
+
+  Clean();
+  var article = articles[25];
+  general(article.photo,article.name,article.text);
+
+});
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35,7 +227,7 @@ Testing();
 
     Clean();
     var article = articles[0];
-    general(article.name,article.text);
+    general(article.photo,article.name,article.text);
 
  });
 
@@ -47,7 +239,7 @@ Testing();
   $("#LittleBear").on("click",function(){
 document.querySelector("#top").innerHTML=(" ");
     var article = articles[1];
-    general(article.name,article.text);
+    general(article.photo,article.name,article.text);
 
   });
 
@@ -60,7 +252,7 @@ $('#navbarDropdownMenuLink').dblclick(function(){
 Clean();
  for(var i=0;i<articles.length;i++){
    var article=articles[i];
-   general(article.name,article.text)
+   general(article.photo,article.name,article.text)
  }
 
 });
@@ -72,7 +264,7 @@ Clean();
 $("#Cassiopeia").on("click",function(){
   Clean();
       var article = articles[2];
-      general(article.name,article.text);
+      general(article.photo,article.name,article.text);
 
 });
 
@@ -131,10 +323,10 @@ $("#img").on("click","#rightanswer",function(){
 
 
 
-    function general(name,text){
+    function general(photo,name,text){
 //document.querySelector("#testans").innerHTML=(" ");
-        document.querySelector("#top").innerHTML+=('<div class="col-md-4" ><img id=""  src=" "class="img"></div>'+
-        '</div><div class="col-md-8"><ul class="list-group">'+
+        document.querySelector("#top").innerHTML+=('<div class="col-lg-4" ><img id="photo"  src=" photo/Cassiop.png" class="img-fluid"></div>'+
+        '</div><div class="col-lg-8"><ul class="list-group">'+
           '  <li class="list-group-item list-group-item-dark">'+name+'</li>'+
         '<li class="list-group-item">'+text+'</li></div>');
 
