@@ -212,18 +212,7 @@ $('#CanisLittle').on("click",function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-  $('#BigBear').on("click",function(){
+$('#BigBear').on("click",function(){
 
     Clean();
     var article = articles[0];
@@ -231,21 +220,12 @@ $('#CanisLittle').on("click",function(){
 
  });
 
-
-
-
-
-
   $("#LittleBear").on("click",function(){
 document.querySelector("#top").innerHTML=(" ");
     var article = articles[1];
     general(article.photo,article.name,article.text);
 
   });
-
-
-
-
 
 $('#navbarDropdownMenuLink').dblclick(function(){
   //alert("1");
@@ -257,10 +237,6 @@ Clean();
 
 });
 
-
-
-
-
 $("#Cassiopeia").on("click",function(){
   Clean();
       var article = articles[2];
@@ -269,14 +245,11 @@ $("#Cassiopeia").on("click",function(){
 });
 
 
-
 $("#testans").on("click","#check",function(){//$('#staticParent').on('click', '.dynamicElement', function() {
 
   Checking();
 
 });
-
-
 
 $("#img").on("click","#secondTest",function(){
 
@@ -284,9 +257,6 @@ $("#img").on("click","#secondTest",function(){
   Testing();
 
 });
-
-
-
 
 $("#testans").on("click","#return",function(){
 
@@ -296,19 +266,10 @@ $("#testans").on("click","#return",function(){
 });
 
 
-
-
 $("#img").on("click","#rightanswer",function(){
-
-
   Clean();
   allanswers();
 });
-
-
-
-
-
 
 
     function Clean(){
@@ -319,10 +280,6 @@ $("#img").on("click","#rightanswer",function(){
     };
 
 
-
-
-
-
     function general(photo,name,text){
 //document.querySelector("#testans").innerHTML=(" ");
         document.querySelector("#top").innerHTML+=('<div class="col-lg-4" ><img id="photo"  src=" photo/Cassiop.png" class="img-fluid"></div>'+
@@ -331,7 +288,6 @@ $("#img").on("click","#rightanswer",function(){
         '<li class="list-group-item">'+text+'</li></div>');
 
     };
-
 
 
 
@@ -355,10 +311,7 @@ $("#img").on("click","#rightanswer",function(){
         document.querySelector("#testans").innerHTML+=('<input type="button" id="check" class="btn btn-info" value="Result">');
    };
 
-
-
-
-function Checking(){
+   function Checking(){
 
   alert("1");
 var score =0;
@@ -418,9 +371,6 @@ $('#testans').css("margin-right","1%");
 };
 
 
-
-
-
 function allanswers(){
 
   for (var i=0; i<questions.length;i++){
@@ -437,17 +387,9 @@ function allanswers(){
      if (i+j==question.correctAnswer){
            document.querySelector("#ans"+i).innerHTML+=(question.answers[j]);
 
-
-
-
-
-
-     }
-
-   };
-
-
-   }
+       }
+     };
+ }
   document.querySelector("#testans").innerHTML+=('<input type="button" id="return" class="btn btn-info" value="Повернутися до тесту"></div>');
 
   $('#return').css("width","35%");
