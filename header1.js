@@ -241,7 +241,9 @@ $("#Cassiopeia").on("click",function(){
   Clean();
       var article = articles[2];
       general(article.photo,article.name,article.text);
-
+ console.log(article.name);
+ console.log(article.text);
+ console.log(article.photo);
 });
 
 
@@ -274,19 +276,21 @@ $("#img").on("click","#rightanswer",function(){
 
     function Clean(){
         $('#testans').css("border","none");
-      document.querySelector("#testans").innerHTML=(" ");
-      document.querySelector("#img").innerHTML=("");
-      document.querySelector("#top").innerHTML=(" ");
+      $("#testans").html(" ");
+    //  document.querySelector("#img").innerHTML=("");
+    $("#img").html("");
+    $("#top").html(" ");
     };
 
 
     function general(photo,name,text){
 //document.querySelector("#testans").innerHTML=(" ");
-        document.querySelector("#top").innerHTML+=('<div class="col-lg-4" ><img id="photo"  src=" photo/Cassiop.png" class="img-fluid"></div>'+
+        document.querySelector("#top").innerHTML+=('<div class="col-lg-4" ><img id="photo"  src="'+photo+' " class="img-fluid"></div>'+
         '</div><div class="col-lg-8"><ul class="list-group">'+
           '  <li class="list-group-item list-group-item-dark">'+name+'</li>'+
         '<li class="list-group-item">'+text+'</li></div>');
-
+ //document.querySelector("#photo").src = photo;
+ console.log(document.querySelector("#photo").src);
     };
 
 
@@ -305,7 +309,8 @@ $("#img").on("click","#rightanswer",function(){
                    document.querySelector("#ans"+i).innerHTML+=("<input class='answ' id='id"+i+j+"' type ='radio' value='"+i+j+"' name="+i+">"+question.answers[j]+"<br>");
 
               }
-          document.querySelector("#testans").innerHTML+=('</li>');
+              $("#testans").html +=('</li>')
+        //  document.querySelector("#testans").innerHTML+=('</li>');
          document.querySelector("#testans").innerHTML+=('</div><div class="col-1" ></div>');
          };
         document.querySelector("#testans").innerHTML+=('<input type="button" id="check" class="btn btn-info" value="Result">');
