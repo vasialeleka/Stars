@@ -283,7 +283,7 @@ $("#img").on("click","#rightanswer",function(){
     };
 
 
-    function general(photo,name,text){
+  function general(photo,name,text){
 //document.querySelector("#testans").innerHTML=(" ");
         document.querySelector("#top").innerHTML+=('<div class="col-lg-4" ><img id="photo"  src="'+photo+' " class="img-fluid"></div>'+
         '</div><div class="col-lg-8"><ul class="list-group">'+
